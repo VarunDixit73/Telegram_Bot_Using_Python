@@ -1,0 +1,13 @@
+# INSTALLING
+
+pip install python-telegram-bot --upgrade
+git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
+cd python-telegram-bot
+python setup.py install
+git submodule update --init --recursive
+
+# OPERATIONAL DEPENDENCIES
+
+pip install python-telegram-bot[passport]
+pip install python-telegram-bot[ujson]
+pip install python-telegram-bot[socks]
