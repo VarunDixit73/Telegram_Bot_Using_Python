@@ -16,7 +16,10 @@ def select_lang(update: Update, context: callbackcontext) -> None:
         [
             InlineKeyboardButton("Hindi",callback_data="Hindi"),
             InlineKeyboardButton("Spanish",callback_data="Spanish"),
-            InlineKeyboardButton("German",callback_data="German")
+            InlineKeyboardButton("German",callback_data="German"),
+            InlineKeyboardButton("French",callback_data="French"),
+            InlineKeyboardButton("Russian",callback_data="Russian"),
+            InlineKeyboardButton("Japanese",callback_data="Japanese")
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -42,6 +45,7 @@ def lang_translator(user_input):
 def reply(update, context):
     user_input = update.message.text
     update.message.reply_text(lang_translator(user_input))
+
 
 def main():
     api = open("config.env","r")
